@@ -1,16 +1,18 @@
-# from django.shortcuts import render
-from rest_framework import permissions
+# from rest_framework import permissions
 from rest_framework import viewsets
+from rest_framework.generics import GenericAPIView
 
 # Create your views here.
 
-from .models import Leadmodule
+from .models import Loginuser
 from .serializers import Leadserializer
+class API(GenericAPIView):
+    serializer_class=Leadserializer
 class login(viewsets.ModelViewSet):
 
-    queryset = Leadmodule.objects.all()
+    queryset = Loginuser.objects.all()
     serializer_class = Leadserializer
-    permission_classes=[permissions.IsAuthenticated]
+    # permission_classes=[permissions.IsAuthenticated]
 
     # def  addmodule(request):
 

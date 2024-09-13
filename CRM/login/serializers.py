@@ -1,9 +1,9 @@
 from rest_framework import serializers 
-from .models import Leadmodule
+from .models import Loginuser
 
 class Leadserializer(serializers.ModelSerializer):
 
     class Meta:
 
-        model=Leadmodule
+        model=Loginuser
         fields ="__all__"

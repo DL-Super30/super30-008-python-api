@@ -1,10 +1,10 @@
-from django import path
+from django.urls import path,include
 from rest_framework.routers import DefaultRouter
-from .views import CreateNewLeadViewSet
+from .views import LeadViewSet
 
-router = DefaultRouter()
+Router=DefaultRouter()
 
-router.register
+Router.register(r"lead",LeadViewSet)
 urlpatterns=[
-    path("")
+    path("",include(Router.urls))
 ]

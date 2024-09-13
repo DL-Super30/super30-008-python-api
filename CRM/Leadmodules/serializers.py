@@ -1,7 +1,9 @@
-from rest_framework import serializers 
-from .models import Leadmodule
+from rest_framework import serializers
+from .models import leads
 
-class Leadserializer(serializers.Modelserializer):
+class Leadserializers(serializers.ModelSerializer):
 
-    model=Leadmodule
-    fields ="__all__"
+    class Meta :
+
+        model= leads
+        fields="__all__"
