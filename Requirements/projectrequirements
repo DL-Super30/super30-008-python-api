@@ -14,7 +14,7 @@ commands:
    >now configure the database,pymysql,give appname in installed apps in settings of project file.
    >after creating of models give commands for migrations :
         "python manage.py makmeigrations",
-        "python manage.py sqlmigrate appname",
-        "python manage.py migrate".hello
+        "python manage.py sqlmigrate appname 0001",
+        "python manage.py migrate".
    >after configuration of all urls in the app and project run the server in project directory in cmd "python manage.py runserver".
       
