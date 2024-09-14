@@ -15,6 +15,6 @@ commands:
    >after creating of models give commands for migrations :
         "python manage.py makmeigrations",
         "python manage.py sqlmigrate appname",
-        "python manage.py migrate".
+        "python manage.py migrate".hello
    >after configuration of all urls in the app and project run the server in project directory in cmd "python manage.py runserver".
       
