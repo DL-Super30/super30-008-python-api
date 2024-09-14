@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "rest_framework",
     "login",
-    "Leadmodules",
+    "leadmodules",
     "drf_yasg",
 ]
 
