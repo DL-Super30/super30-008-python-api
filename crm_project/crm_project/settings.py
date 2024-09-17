@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'login',
     'createlead',
-    
+    'opportunities',
     'drf_yasg',
    
    
@@ -85,17 +85,15 @@ WSGI_APPLICATION = 'crm_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'skill02_crm',
-        'USER': 'root',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        'USER': 'postgres',
         'PASSWORD': 'Varu@2001',
-        'HOST': 'localhost',    
-        'PORT': '3306'
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
