@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-ppi&23_s=qvw#sahte!ed+e=dmjz)#g*nwy%ho-v$*xp34_5u8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,14 +83,14 @@ WSGI_APPLICATION = 'crm_project.wsgi.application'
 
 #  Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-import os
 
+import os
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        'USER': 'postgres',
-        'PASSWORD': 'Varu@2001',
+        "NAME": os.environ.get("postgres"),
+        'USER': os.environ.get('postgres'),
+        'PASSWORD': os.environ.get('Varu@2001'),
         'HOST': 'localhost',
         'PORT': '5432'
     }

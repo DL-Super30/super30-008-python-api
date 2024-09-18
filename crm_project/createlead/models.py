@@ -41,12 +41,6 @@ class CreateLeads(models.Model):
         ('WhatsAppSkillCapital', 'WhatsAppSkillCapital'),
         
     ]
-    TECH_STACK_CHOICES = [
-        ('Life Skills','Life Skills'),
-        ('Study Abroad','Study Abroad'),
-        ('HR','HR'),
-    ]
-
     COURSES_CHOICES = [
         ('HR Business Partner','HR Business Partner'),
         ('HR Generalist Core HR','HR Generalist Core HR'),
@@ -78,6 +72,12 @@ class CreateLeads(models.Model):
         ('HYD Classroom','Hyd Classroom'),
     ]
 
+    TECH_STACK_CHOICES = [
+        ('Life Skills','Life Skills'),
+        ('Study Abroad','Study Abroad'),
+        ('HR','HR'),
+    ]
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     cc = models.BigIntegerField()
@@ -104,8 +104,6 @@ class CreateLeads(models.Model):
         choices=LEAD_SOURCE_CHOICES,
         default='None',
     )
-
-  
     TechStack= models.CharField(
         max_length=24,
         choices=TECH_STACK_CHOICES,
