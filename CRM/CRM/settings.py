@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import pymysql
-pymysql.install_as_MySQLdb()
+import psycopg2
+# import pymysql
+# pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ SECRET_KEY = "django-insecure-mh48^umljw+!02dr4+x4364vkn0i*iy&gcy+508s#pmaf^6=c=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -91,12 +92,12 @@ WSGI_APPLICATION = "CRM.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "crmproject",
-        "USER":"root",
-        "PASSWORD":"raju_25**9876",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER":"postgres",
+        "PASSWORD":"raju**9876",
         "host":"localhost",
-        "port":"3306",
+        "port":"5432",
     }
 }
 
