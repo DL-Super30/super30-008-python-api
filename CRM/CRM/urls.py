@@ -44,4 +44,5 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path("api/",include("login.urls")),
     path("leadsapi/",include("leadmodules.urls")),
+    path("opportunityapi/",include("Opportunities.urls")),
 ]

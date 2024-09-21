@@ -29,7 +29,29 @@ class login(viewsets.ModelViewSet):
     #         else:
     #             f= Leadmoduleform()
 
-                        
+# from rest_framework.response import Response
+
+# class MyViewSet(viewsets.ViewSet):
+#     def list(self, request):
+#         return Response({"message": "GET method"})
+
+#     def create(self, request):
+#         return Response({"message": "POST method"})
+
+#     def update(self, request, pk=None):
+#         return Response({"message": "PUT method"})
+
+#     def destroy(self, request, pk=None):
+#         return Response({"message": "DELETE method"})
+
+
+# from django.utils.deprecation import MiddlewareMixin
+
+# class AllowHeaderMiddleware(MiddlewareMixin):
+#     def process_response(self, request, response):
+#         response['Allow'] = 'GET, POST, PUT, DELETE, OPTIONS'
+#         return response
+
 
 
 
