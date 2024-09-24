@@ -95,7 +95,7 @@ class Opportunities(models.Model):
         ("Spoken English","Spoken English"),
         ("Public Speaking","Public Speaking"),
         ("Communication Skills","Communication skills"),
-        ("SOft Skills","Soft Skills"),
+        ("Soft Skills","Soft Skills"),
         ("Personality Development","Personality Development"),
         ("IELTS","IELTS"),
         ("TOEFL","TOEFFL"),
@@ -117,7 +117,7 @@ class Opportunities(models.Model):
         ("Ready to join","Ready to join"),
         ("Fees Negotiation","Fees Negotiation"),
         ("Batch allocation","Batch allocation"),
-        ("INterested Demo","Interested Demo"),
+        ("Interested Demo","Interested Demo"),
         ("Need time this week","Need time this week"),
         ("Need time next week","Need time next week"),
         ("Need time this Month","Need time this Month"),
@@ -129,9 +129,9 @@ class Opportunities(models.Model):
     ]
     LOST_OPPORTUNITY_REASON=[
         ("None","None"),
-        ("Invalid Number","INvalid Number"),
-        ("Not Interested","NOt INterested"),
-        ("Joinede another institute","Joined another institute"),
+        ("Invalid Number","Invalid Number"),
+        ("Not Interested","Not Interested"),
+        ("Joined another institute","Joined another institute"),
         ("Asking free course","Asking free course"),
         ("Pay after palcement","Pay after placement")
     ]

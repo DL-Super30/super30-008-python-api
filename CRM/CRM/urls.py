@@ -45,4 +45,5 @@ urlpatterns = [
     path("api/",include("login.urls")),
     path("leadsapi/",include("leadmodules.urls")),
     path("opportunityapi/",include("Opportunities.urls")),
+    
 ]
