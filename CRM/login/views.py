@@ -18,10 +18,10 @@ class Register(generics.GenericAPIView):
     queryset = user.objects.all()
     serializer_class = RegisterSerializer
     # permission_classes=[permissions.IsAuthenticated]
-# class login(generics.GenericAPIView):
+class login(generics.GenericAPIView):
 
-#     queryset = user.objects.all()
-#     serializer_class = LoginSerializer
+    queryset = user.objects.all()
+    serializer_class = LoginSerializer
 #     # permission_classes=[permissions.IsAuthenticated]
 #     def post(self, request):
 #         serializer = self.get_serializer(data=request.data)
