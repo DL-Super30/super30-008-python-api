@@ -1,11 +1,11 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
+
 
 class Learner(models.Model):
 
-    First_Name=models.CharField(max_length=100)
+    First_Name=models.CharField(max_length=200)
     Last_Name=models.CharField(max_length=100)
     Id_Proof=models.BigIntegerField()
     Phone=models.BigIntegerField()
