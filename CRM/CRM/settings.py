@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "login",
     "corsheaders",
     "Opportunities",
+    "leads",
     "leadmodules",
     "Learner",
     "drf_yasg",
