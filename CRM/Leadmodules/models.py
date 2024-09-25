@@ -4,13 +4,13 @@ from django.utils import timezone
 # Create your models here.
 class leads(models.Model):
 
-    user_name=models.CharField(max_length=100)
-    contact_no=models.BigIntegerField()
-    cc=models.BigIntegerField(default=+91)
-    email=models.EmailField(default="N/A")
-    fee_coated=models.DecimalField(max_digits=12,decimal_places=2,default=0.0)
-    datefield=models.DateTimeField(default=timezone.now)
-    description=models.TextField(max_length=300,default="N/A")
+    Name=models.CharField(max_length=100)
+    Phone=models.BigIntegerField()
+    CC=models.BigIntegerField(default=+91)
+    Email=models.EmailField(default="N/A")
+    Fee_Quoted=models.DecimalField(max_digits=12,decimal_places=2,default=0.0)
+    # datefield=models.DateTimeField(default=timezone.now)
+    Description=models.TextField(max_length=300,default="N/A")
 
     LEAD_STATUS_CHOICES=[
         ("None","None"),
@@ -87,31 +87,31 @@ class leads(models.Model):
     ]
 
 
-    lead_source=models.CharField(
+    Lead_Source=models.CharField(
         max_length=20,
         choices= LEAD_SOURCE_CHOICES ,
         default="None",
     )
 
-    class_mode=models.CharField(
+    Class_Mode=models.CharField(
         max_length=20,
         choices= CLASS_MODE_CHOICES,
         default="HYDclassrrom",
     )
 
-    lead_status=models.CharField(
+    Lead_Status=models.CharField(
         max_length=20,
         choices= LEAD_STATUS_CHOICES,
         default="None",
     )
 
-    courses=models.CharField(
+    Course=models.CharField(
         max_length=20,
         choices= COURSES_CHOICES,
         default="None",
     )
 
-    tech_stack=models.CharField(
+    Stack=models.CharField(
         max_length=20,
         choices=TECH_STACK_CHOICES ,
         default="None",

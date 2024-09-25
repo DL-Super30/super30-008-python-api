@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "Opportunities",
     "leadmodules",
+    "Learner",
     "drf_yasg",
 ]
 
@@ -99,8 +100,8 @@ DATABASES = {
         "NAME": "postgres",
         "USER":"postgres",
         "PASSWORD":"raju**9876",
-        "host":"localhost",
-        "port":"5432",
+        "HOST":"localhost",
+        "PORT":"5432",
     }
 }
 

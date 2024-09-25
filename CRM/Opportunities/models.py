@@ -5,12 +5,12 @@ from django.utils import timezone
 class Opportunities(models.Model):
 
     Name=models.CharField(max_length=100)
-    cc=models.BigIntegerField()
-    contact_no=models.BigIntegerField()
-    email=models.EmailField(max_length=100)
-    fee_coated=models.DecimalField(max_digits=12,decimal_places=2,default=0.0)
-    description=models.CharField(max_length=200,default="N/A")
-    datetime=models.DateTimeField(default=timezone.now)
+    CC=models.BigIntegerField()
+    Phone=models.BigIntegerField()
+    Email=models.EmailField(max_length=100)
+    Fee_Quoted=models.DecimalField(max_digits=12,decimal_places=2,default=0.0)
+    Description=models.CharField(max_length=200,default="N/A")
+    # Datetime=models.DateTimeField(default=timezone.now)
 
     LEAD_STATUS_CHOICES=[
         ("Not contacted","Not contacted"),
@@ -168,31 +168,31 @@ class Opportunities(models.Model):
     )
     
 
-    lead_source=models.CharField(
+    Lead_Source=models.CharField(
         max_length=20,
         choices= LEAD_SOURCE_CHOICES ,
         default="None",
     )
 
-    class_mode=models.CharField(
+    Class_Mode=models.CharField(
         max_length=20,
         choices= CLASS_MODE_CHOICES,
         default="HYDclassrrom",
     )
 
-    lead_status=models.CharField(
+    Lead_Status=models.CharField(
         max_length=20,
         choices= LEAD_STATUS_CHOICES,
         default="None",
     )
 
-    courses=models.CharField(
+    Course=models.CharField(
         max_length=40,
         choices= COURSES_CHOICES,
         default="None",
     )
 
-    stack=models.CharField(
+    Stack=models.CharField(
         max_length=20,
         choices=STACK_CHOICES ,
         default="None",
