@@ -4,7 +4,7 @@ from .views import LeadViewSet
 
 Router=DefaultRouter()
 
-Router.register(r"lead",LeadViewSet)
+Router.register(r"leads",LeadViewSet)
 urlpatterns=[
     path("",include(Router.urls))
 ]
