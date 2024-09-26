@@ -5,4 +5,6 @@ class CreateLeadsSerializer(serializers.ModelSerializer):
     class Meta:
         model = CreateLeads
         fields = '__all__'
+
+        
         
