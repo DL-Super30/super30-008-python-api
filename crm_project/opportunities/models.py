@@ -1,6 +1,7 @@
 from django.db import models
 # from django.utils import timezone
 
+
 # Create your models here.
 class opportunities(models.Model):
 
@@ -149,7 +150,9 @@ class opportunities(models.Model):
     email = models.EmailField(max_length=255)
     fee_coated = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    date = models.DateTimeField() 
+    date = models.DateField() 
+   
+
     
 
  
