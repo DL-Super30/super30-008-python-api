@@ -22,123 +22,129 @@ class opportunities(models.Model):
         ('8PM_9PM', '8PM_9PM'),
     ]
     LEAD_STATUS_CHOICES = [
-        ('Not Contacted','Not Contacted'),
-        ('Attempted','Attempted'),
-        ('Warm Lead','Warm Lead'),
-        ('Cold Lead','Cold Lead'),
+        ('notContacted', 'notContacted'),
+        ('attempted', 'attempted'),
+        ('warmLead', 'warmLead'),
+        ('coldLead', 'coldLead')
+       
     ]
 
     LEAD_SOURCE_CHOICES = [
-        ('None', 'None'),
-        ('WalkIn', 'WalkIn'),
-        ('StudentReferral', 'StudentReferral'),
-        ('Demo', 'Demo'),
-        ('WebSite', 'WebSite'),
-        ('WebsiteChat', 'WebsiteChat'),
-        ('InboundCall', 'InboundCall'), 
-        ('GoogleAdWords', 'GoogleAdWords'),
-        ('FacebookAds', 'FacebookAds'),
-        ('GoogleMyBusiness', 'GoogleMyBusiness'),
-        ('WhatsAppSkillCapital', 'WhatsAppSkillCapital'),
+        ('none', 'none'),
+        ('walkIn', 'walkIn'),
+        ('studentReferral', 'studentReferral'),
+        ('demo', 'demo'),
+        ('webSite', 'webSite'),
+        ('webSiteChat', 'webSiteChat'),
+        ('inboundCall', 'inboundCall'),
+        ('googleAdWords', 'googleAdWords'),
+        ('facebookAds', 'facebookAds'),
+        ('googleMyBusiness', 'googleMyBusiness'),
+        ('whatsAppSkillCapital', 'whatsAppSkillCapital')
         
     ]
     TECH_STACK_CHOICES = [
-        ('Life Skills','Life Skills'),
-        ('Study Abroad','Study Abroad'),
-        ('HR','HR'),
+        ('lifeSkills', 'lifeSkills'),
+        ('studyAbroad', 'studyAbroad'),
+        ('hr', 'hr')
     ]
 
     COURSES_CHOICES = [
-        ('HR Business Partner','HR Business Partner'),
-        ('HR Generalist Core HR','HR Generalist Core HR'),
-        ('HR Analytics','HR Analytics'),
-        ('Spoken English','Spoken English'),
-        ('Public Speaking','Public Speaking'),
-        ('Communication Skills','Communication Skills'),
-        ('Soft Skills','Soft Skills'),
-        ('Personality Development','Personality Development'),
-        ('Aptitude','Aptitude'),
-        ('IELTS','IELTS'),
-        ('TOEFL','TOEFL'),
-        ('PTE','PTE'),
-        ('GRE','GRE'),
-        ('GMAT','GMAT'),
-        ('Recruitment Specialist','Recruitment Specialist'),
-        ('Payroll Specialist','Payroll Specialist'),
-        ('Learning and Development','Learning and Development'),
-        ('Others','Others'),
-        ('Finance','Finance'),
-        ('Competitive Exams','Competitive Exams'),
-        ('HR Manage','HR Manage'),
+        ('hrBusinessPartner', 'hrBusinessPartner'),
+        ('hrGeneralistCoreHR', 'hrGeneralistCoreHR'),
+        ('hrAnalytics', 'hrAnalytics'),
+        ('spokenEnglish', 'spokenEnglish'),
+        ('publicSpeaking', 'publicSpeaking'),
+        ('communicationSkills', 'communicationSkills'),
+        ('softSkills', 'softSkills'),
+        ('personalityDevelopment', 'personalityDevelopment'),
+        ('aptitude', 'aptitude'),
+        ('ielts', 'ielts'),
+        ('toefl', 'toefl'),
+        ('pte', 'pte'),
+        ('gre', 'gre'),
+        ('gmat', 'gmat'),
+        ('recruitmentSpecialist', 'recruitmentSpecialist'),
+        ('payrollSpecialist', 'payrollSpecialist'),
+        ('learningAndDevelopment', 'learningAndDevelopment'),
+        ('others', 'others'),
+        ('finance', 'finance'),
+        ('competitiveExams', 'competitiveExams'),
+        ('hrManage', 'hrManage')
+
     ]
     
     CLASS_MODE_CHOICES = [
-        ('International Online','International Online'),
-        ('India Online','India Online'),
-        ('BLR Classroom','BLR Classroom'),
-        ('HYD Classroom','Hyd Classroom'),
+        ('internationalOnline', 'internationalOnline'),
+        ('indiaOnline', 'indiaOnline'),
+        ('blrClassroom', 'blrClassroom'),
+        ('hydClassroom', 'hydClassroom')
     ]
     OPPORTUNITY_STATUS = [
-        ('Visiting','Visiting'),
-        ('Visited','Visited'),
-        ('Demo Attended','Demo Attended'),
-        ('Lost Opportunity','Lost Opportunity'),
+        ('visiting', 'visiting'),
+        ('visited', 'visited'),
+        ('demoAttended', 'demoAttended'),
+        ('lostOpportunity', 'lostOpportunity')
+
     ]
     OPPORTUNITY_STAGE =[
-        ('None','None'),
-        ('Advanced Discussion','Advanced Discussion'),
-        ('Ready To Join','Ready To Join'),
-        ('Call Not Answered','Call Not Answered'),
-        ('Visiting','Visiting'),
-        ('Fees Negotiation','Fees Negotiation'),
-        ('Batch Allocation','Batch Allocation'),
-        ('Need Time This Week','Need Time This Week'),
-        ('Need Time Next Week','Need Time Next Week'),
-        ('Need Time This Month','Need Time This Month'),
-        ('Need Time Next Month','Need Time Next Month'),
-        ('Special Requirements ','Special Requirements '),
-        ('Closed Own (Register) ','Closed Own (Register) '),
-        ('Busy & Asked a Call Back ','Busy & Asked a Call Back' ),
-        ('Closed Lost','Closed Lost')
+        ('none', 'none'),
+        ('advancedDiscussion', 'advancedDiscussion'),
+        ('readyToJoin', 'readyToJoin'),
+        ('callNotAnswered', 'callNotAnswered'),
+        ('visiting', 'visiting'),
+        ('feesNegotiation', 'feesNegotiation'),
+        ('batchAllocation', 'batchAllocation'),
+        ('needTimeThisWeek', 'needTimeThisWeek'),
+        ('needTimeNextWeek', 'needTimeNextWeek'),
+        ('needTimeThisMonth', 'needTimeThisMonth'),
+        ('needTimeNextMonth', 'needTimeNextMonth'),
+        ('specialRequirements', 'specialRequirements'),
+        ('closedOwnRegister', 'closedOwnRegister'),
+        ('busyAskedACallBack', 'busyAskedACallBack'),
+        ('closedLost', 'closedLost')
+
         ]
     DEMOATTENDED_STAGE=[
-        ('None','None'),
-        ('Ready To Join','Ready To Join'),
-        ('Advanced Discussion','Advanced Discussion'),
-        ('Call Not Answered','Call Not Answered'),
-        ('Visiting','Visiting'),
-        ('Fees Negotiation','Fees Negotiation'),
-        ('Batch Allocation','Batch Allocation'),
-        ('Need Time This Week','Need Time This Week'),
-        ('Need Time Next Week','Need Time Next Week'),
-        ('Need Time This Month','Need Time This Month'),
-        ('Need Time Next Month','Need Time Next Month'),
-        ('Special Requirements ','Special Requirements '),
-        ('Closed Own (Register) ','Closed Own (Register) '),
-        ('Closed Lost (Cold Lead) ','Closed Lost (Cold Lead) '),
+        ('none', 'none'),
+        ('readyToJoin', 'readyToJoin'),
+        ('advancedDiscussion', 'advancedDiscussion'),
+        ('callNotAnswered', 'callNotAnswered'),
+        ('visiting', 'visiting'),
+        ('feesNegotiation', 'feesNegotiation'),
+        ('batchAllocation', 'batchAllocation'),
+        ('needTimeThisWeek', 'needTimeThisWeek'),
+        ('needTimeNextWeek', 'needTimeNextWeek'),
+        ('needTimeThisMonth', 'needTimeThisMonth'),
+        ('needTimeNextMonth', 'needTimeNextMonth'),
+        ('specialRequirements', 'specialRequirements'),
+        ('closedOwnRegister', 'closedOwnRegister'),
+        ('closedLostColdLead', 'closedLostColdLead')
+
         ]
     VISITED_STAGE=[
-        ('None','None'),
-        ('Call Not Answered','Call Not Answered'),
-        ('Ready To Join','Ready To Join'),
-        ('Fees Negotiation','Fees Negotiation'),
-        ('Batch Allocation','Batch Allocation'),
-        ('Intrested Demo','Intrested Demo'),
-        ('Special Requirements ','Special Requirements '),
-        ('Need Time This Week','Need Time This Week'),
-        ('Need Time Next Week','Need Time Next Week'),
-        ('Need Time This Month','Need Time This Month'),
-        ('Need Time Next Month','Need Time Next Month'),
-        ('Closed Own (Register) ','Closed Own (Register) '),
-        ('Closed Lost (Cold Lead) ','Closed Lost (Cold Lead) '),
+        ('none', 'none'),
+        ('callNotAnswered', 'callNotAnswered'),
+        ('readyToJoin', 'readyToJoin'),
+        ('feesNegotiation', 'feesNegotiation'),
+        ('batchAllocation', 'batchAllocation'),
+        ('interestedDemo', 'interestedDemo'),
+        ('specialRequirements', 'specialRequirements'),
+        ('needTimeThisWeek', 'needTimeThisWeek'),
+        ('needTimeNextWeek', 'needTimeNextWeek'),
+        ('needTimeThisMonth', 'needTimeThisMonth'),
+        ('needTimeNextMonth', 'needTimeNextMonth'),
+        ('closedOwnRegister', 'closedOwnRegister'),
+        ('closedLostColdLead', 'closedLostColdLead')
+
         ]
     LOSTOPPORTUNITY_REASON=[
-        ('None','None'),
-        ('Invalid Number','Invalid Number'),
-        ('Not Intersted','Not Intersted'),
-        ('Joined Other Institute','Joined Other Institute'),
-        ('Asking Free Course','Asking Free Course'),
-        ('Pay After Placement','Pay After Placement'),
+        ('none', 'none'),
+        ('invalidNumber', 'invalidNumber'),
+        ('notInterested', 'notInterested'),
+        ('joinedOtherInstitute', 'joinedOtherInstitute'),
+        ('askingFreeCourse', 'askingFreeCourse'),
+        ('payAfterPlacement', 'payAfterPlacement')
 
     ]
     
