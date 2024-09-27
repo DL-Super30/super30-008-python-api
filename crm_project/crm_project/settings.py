@@ -35,7 +35,9 @@ INSTALLED_APPS = [
     'login',
     'createlead',
     'opportunities',
+    'learners',
     'drf_yasg',
+   
    
    
 ]
