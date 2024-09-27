@@ -100,7 +100,7 @@ class opportunities(models.Model):
         ('Busy & Asked a Call Back ','Busy & Asked a Call Back' ),
         ('Closed Lost','Closed Lost')
         ]
-    DEMOATTEND_STAGE=[
+    DEMOATTENDED_STAGE=[
         ('None','None'),
         ('Ready To Join','Ready To Join'),
         ('Advanced Discussion','Advanced Discussion'),
@@ -196,9 +196,9 @@ class opportunities(models.Model):
         choices=OPPORTUNITY_STAGE,
         default='Select Opportunity Stage',
     )
-    demoattend_status = models.CharField(
+    demoattended_stage = models.CharField(
         max_length=30,
-        choices=DEMOATTEND_STAGE,
+        choices=DEMOATTENDED_STAGE,
         default='Select Demo Attend Stage',
     )
     visited_stage = models.CharField(
