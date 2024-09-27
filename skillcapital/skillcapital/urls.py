@@ -29,6 +29,7 @@ urlpatterns = [
     path("api/",include("leads.urls")),
     path("api/",include("Opportunities.urls")),
     path("api/",include("Learner.urls")),
+    path("api/",include("Course.urls")),
 ]
 
 # from django.urls import re_path

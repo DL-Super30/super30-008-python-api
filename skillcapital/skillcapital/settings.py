@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "leads",
     "Opportunities",
     "Learner",
+    "Course",
     "rest_framework_simplejwt",
     "rest_framework",
     "corsheaders",
