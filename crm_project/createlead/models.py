@@ -27,7 +27,7 @@ class CreateLeads(models.Model):
         ('Cold Lead','Cold Lead'),
     ]
     LEAD_SOURCE_CHOICES = [
-        ('None', 'None'),
+        ('None', 'None'), 
         ('WalkIn', 'WalkIn'),
         ('StudentReferral', 'StudentReferral'),
         ('Demo', 'Demo'),
@@ -83,7 +83,7 @@ class CreateLeads(models.Model):
     email = models.EmailField(max_length=255)
     fee_coated = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    date = models.DateField()
+    date = models.DateTimeField()
         
 
     batch_timing = models.CharField(
