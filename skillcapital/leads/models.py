@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import pytz
 
 # Create your models here.
 class leads(models.Model):
@@ -9,8 +10,9 @@ class leads(models.Model):
     CC=models.BigIntegerField(default=+91)
     Email=models.EmailField(default="N/A")
     Fee_Quoted=models.DecimalField(max_digits=12,decimal_places=2,default=0.0)
-    # datefield=models.DateTimeField(default=timezone.now)
+    Datetime=models.DateTimeField()
     Description=models.TextField(max_length=300,default="N/A")
+    
 
     LEAD_STATUS_CHOICES=[
         ("None","None"),
@@ -118,3 +120,6 @@ class leads(models.Model):
     )
 
     
+    def get_local_time(self, timezone_str):
+        local_timezone = pytz.timezone(timezone_str)
+        return self.date_field.astimezone(local_timezone)

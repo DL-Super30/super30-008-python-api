@@ -1,13 +1,18 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
+from .models import user
 from django.contrib.auth import authenticate
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
+from rest_framework.permissions import IsAuthenticated  
+from rest_framework.authentication import TokenAuthentication
 
 class UserRegistrationView(generics.CreateAPIView):
     serializer_class = UserRegistrationSerializer
 
 class UserLoginView(generics.GenericAPIView):
+
+    queryset=user.objects.all()
     serializer_class = UserLoginSerializer
 
     def post(self, request, *args, **kwargs):
@@ -22,3 +27,10 @@ class UserLoginView(generics.GenericAPIView):
         if user is not None:
             return Response({'message': 'Login successful!'}, status=status.HTTP_200_OK)
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+    def get(self, request, *args, **kwargs):
+        try:
+            users = user.objects.all()
+            userdata = [{'username': user.username} for user in users]
+            return Response(userdata, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

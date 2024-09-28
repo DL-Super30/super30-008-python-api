@@ -7,5 +7,5 @@ class Course(models.Model):
     Course_Name=models.CharField(max_length=200)
     Course_Fee=models.DecimalField(max_digits=12,decimal_places=2)
     Description=models.TextField(max_length=300)
-    Course_Brochure=models.ImageField()
+    Course_Brochure=models.FileField()
     
