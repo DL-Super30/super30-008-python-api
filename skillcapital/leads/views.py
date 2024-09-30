@@ -21,8 +21,4 @@ class LeadViewSet(viewsets.ModelViewSet):
 
         return render(request,  {'items': leads})
       
-    # def list(self, request, *args, **kwargs):
-    #     response = super().list(request, *args, **kwargs)
-    #     for event in response.data:
-    #         event['Datetime'] = event['Datetime'].replace(tzinfo=None)  # Remove timezone info
-    #     return response
+    

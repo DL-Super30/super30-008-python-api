@@ -91,6 +91,8 @@ WSGI_APPLICATION = "skillcapital.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import os
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -139,14 +141,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+import os
+
 STATIC_URL = "static/"
+STATIC_ROOT=os.path.join(BASE_DIR,"static")
+
+MEDIA_URL="media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# settings.py
+
+
 CORS_ORIGIN_ALLOW_ALL = True
+
 
 from datetime import timedelta
 
