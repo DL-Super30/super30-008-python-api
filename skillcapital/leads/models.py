@@ -120,6 +120,4 @@ class leads(models.Model):
     )
 
     
-    def get_local_time(self, timezone_str):
-        local_timezone = pytz.timezone(timezone_str)
-        return self.date_field.astimezone(local_timezone)
+    

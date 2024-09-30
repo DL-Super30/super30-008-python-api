@@ -19,10 +19,10 @@ class LeadViewSet(viewsets.ModelViewSet):
           if item.date_field:  # Ensure date_field is not None
             item.local_time = item.date_field.astimezone(local_timezone)
 
-        return render(request, 'item_list.html', {'items': leads})
+        return render(request,  {'items': leads})
       
-    def list(self, request, *args, **kwargs):
-        response = super().list(request, *args, **kwargs)
-        for event in response.data:
-            event['Datetime'] = event['Datetime'].replace(tzinfo=None)  # Remove timezone info
-        return response
+    # def list(self, request, *args, **kwargs):
+    #     response = super().list(request, *args, **kwargs)
+    #     for event in response.data:
+    #         event['Datetime'] = event['Datetime'].replace(tzinfo=None)  # Remove timezone info
+    #     return response
