@@ -29,54 +29,57 @@ class learners(models.Model):
     BatchTiming = models.DateField(default=timezone.now)
 
     ATTEND_DEMO_CHOICES=[
-        ('none', 'none'),
-        ('readyToJoin', 'readyToJoin'),
-        ('advancedDiscussion', 'advancedDiscussion'),
-        ('callNotAnswered', 'callNotAnswered'),
-        ('visiting', 'visiting'),
-        ('feesNegotiation', 'feesNegotiation'),
-        ('batchAllocation', 'batchAllocation'),
-        ('needTimeThisWeek', 'needTimeThisWeek'),
-        ('needTimeNextWeek', 'needTimeNextWeek'),
-        ('needTimeThisMonth', 'needTimeThisMonth'),
-        ('needTimeNextMonth', 'needTimeNextMonth'),
-        ('specialRequirements', 'specialRequirements'),
-        ('closedOwnRegister', 'closedOwnRegister'),
-        ('closedLostColdLead', 'closedLostColdLead')
+        ('None', 'None'),
+        ('Ready To Join', 'Ready To Join'),
+        ('Advanced Discussion', 'Advanced Discussion'),
+        ('Call Not Answered', 'Call Not Answered'),
+        ('Visiting', 'Visiting'),
+        ('Fees Negotiation', 'Fees Negotiation'),
+        ('Batch Allocation', 'Batch Allocation'),
+        ('Need Time This Week', 'Need Time This Week'),
+        ('Need Time Next Week', 'Need Time Next Week'),
+        ('Need Time This Month', 'Need Time This Month'),
+        ('Need Time Next Month', 'Need Time Next Month'),
+        ('Special Requirements', 'Special Requirements'),
+        ('Closed Own Register', 'Closed Own Register'),
+        ('Closed Lost Cold Lead', 'Closed Lost Cold Lead')
+
 
     ]
     LEARNER_STAGE_CHOICES=[
-        ('none', 'none'),
-        ('callNotAnswered', 'callNotAnswered'),
-        ('readyToJoin', 'readyToJoin'),
-        ('feesNegotiation', 'feesNegotiation'),
-        ('batchAllocation', 'batchAllocation'),
-        ('interestedDemo', 'interestedDemo'),
-        ('specialRequirements', 'specialRequirements'),
-        ('needTimeThisWeek', 'needTimeThisWeek'),
-        ('needTimeNextWeek', 'needTimeNextWeek'),
-        ('needTimeThisMonth', 'needTimeThisMonth'),
-        ('needTimeNextMonth', 'needTimeNextMonth'),
-        ('closedOwnRegister', 'closedOwnRegister')
+        ('None', 'None'),
+        ('Call Not Answered', 'Call Not Answered'),
+        ('Ready To Join', 'Ready To Join'),
+        ('Fees Negotiation', 'Fees Negotiation'),
+        ('Batch Allocation', 'Batch Allocation'),
+        ('Interested Demo', 'Interested Demo'),
+        ('Special Requirements', 'Special Requirements'),
+        ('Need Time This Week', 'Need Time This Week'),
+        ('Need Time Next Week', 'Need Time Next Week'),
+        ('Need Time This Month', 'Need Time This Month'),
+        ('Need Time Next Month', 'Need Time Next Month'),
+        ('Closed Own Register', 'Closed Own Register')
+
 
     ]
     LOCATION_CHOICES=[
-        ('none', 'none'),
-        ('advancedDiscussion', 'advancedDiscussion'),
-        ('readyToJoin', 'readyToJoin'),
-        ('visiting', 'visiting'),
-        ('feesNegotiation', 'feesNegotiation'),
-        ('batchAllocation', 'batchAllocation'),
-        ('interestedDemo', 'interestedDemo'),
-        ('needTimeThisWeek', 'needTimeThisWeek'),
-        ('needTimeNextWeek', 'needTimeNextWeek'),
-        ('needTimeThisMonth', 'needTimeThisMonth'),
-        ('needTimeNextMonth', 'needTimeNextMonth'),
-        ('specialRequirements', 'specialRequirements'),
-        ('paymentLinkSent', 'paymentLinkSent'),
-        ('closedOwnRegister', 'closedOwnRegister'),
-        ('busyAskedACallBack', 'busyAskedACallBack'),
-        ('closedLost', 'closedLost')
+        ('None', 'None'),
+        ('Advanced Discussion', 'Advanced Discussion'),
+        ('Ready To Join', 'Ready To Join'),
+        ('Visiting', 'Visiting'),
+        ('Fees Negotiation', 'Fees Negotiation'),
+        ('Batch Allocation', 'Batch Allocation'),
+        ('Interested Demo', 'Interested Demo'),
+        ('Need Time This Week', 'Need Time This Week'),
+        ('Need Time Next Week', 'Need Time Next Week'),
+        ('Need Time This Month', 'Need Time This Month'),
+        ('Need Time Next Month', 'Need Time Next Month'),
+        ('Special Requirements', 'Special Requirements'),
+        ('Payment Link Sent', 'Payment Link Sent'),
+        ('Closed Own Register', 'Closed Own Register'),
+        ('Busy Asked A Call Back', 'Busy Asked A Call Back'),
+        ('Closed Lost', 'Closed Lost')
+
 
         ]
         

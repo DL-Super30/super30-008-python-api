@@ -32,6 +32,8 @@ urlpatterns = [
     path('api/', include('createlead.urls')),
     path('api/', include('opportunities.urls')),
     path('api/', include('learners.urls')),
+    path('api/', include('course.urls')),
+
 
    
 
