@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 # import datetime
-import pytz
+# import pytz
 
 
 # Create your models here.
@@ -89,7 +89,7 @@ class CreateLeads(models.Model):
     email = models.EmailField(max_length=255)
     fee_coated = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    date = models.DateTimeField()    
+    date = models.DateField(default=timezone.now)
     
     
     batch_timing = models.CharField(
