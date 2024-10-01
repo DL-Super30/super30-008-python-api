@@ -15,7 +15,6 @@ class learners(models.Model):
     Source = models.CharField()
     LearnerOwner = models.IntegerField()
     Currency = models.DecimalField(max_digits=10, decimal_places=3)
-    CounselingDoneBY = models.BooleanField(default=False)
     ExchangeRate = models.DecimalField(max_digits=10, decimal_places=3)
     Leadcratedtime =  models.DateField(default=timezone.now)
     RegisteredCourse = models.IntegerField()
@@ -81,7 +80,11 @@ class learners(models.Model):
         ('Closed Lost', 'Closed Lost')
 
 
-        ]
+    ]
+    COUNSELING_CHOICES = [
+        ('True', 'True'),
+        ('False', 'False'),
+    ]
         
     Attended_Demo= models.CharField(
         max_length=30,
@@ -97,6 +100,11 @@ class learners(models.Model):
         max_length=30,
         choices=LOCATION_CHOICES,
         default='None',
+    )
+    counseling_done_by = models.CharField(
+        max_length=5,
+        choices=COUNSELING_CHOICES,
+        default='False'
     )
     
 
