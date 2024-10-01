@@ -35,9 +35,6 @@ urlpatterns = [
     path('api/', include('course.urls')),
 
 
-   
-
-
 ]
 
 
