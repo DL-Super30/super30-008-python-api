@@ -16,7 +16,7 @@ class learners(models.Model):
     LearnerOwner = models.IntegerField()
     Currency = models.DecimalField(max_digits=10, decimal_places=3)
     ExchangeRate = models.DecimalField(max_digits=10, decimal_places=3)
-    Leadcratedtime =  models.DateField(default=timezone.now)
+    Leadcreatedtime =  models.DateField(default=timezone.now)
     RegisteredCourse = models.IntegerField()
     TechStack = models.CharField(max_length=100)
     CourseComments = models.CharField(max_length=100)

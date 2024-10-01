@@ -14,14 +14,14 @@ class CreateLeadsViewSet(viewsets.ModelViewSet):
 
 
 
-def Leads(request):
+# def Leads(request):
     
-        local_timezone = pytz.timezone('Asia/Kolkata') 
-        for item in Leads:
-          if item.date_field:  # Ensure date_field is not None
-            item.local_time = item.date_field.astimezone(local_timezone)
+#         local_timezone = pytz.timezone('Asia/Kolkata') 
+#         for item in Leads:
+#           if item.date_field:  # Ensure date_field is not None
+#             item.local_time = item.date_field.astimezone(local_timezone)
 
-        return render(request,  {'items': Leads})
+#         return render(request,  {'items': Leads})
       
 
 
