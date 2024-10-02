@@ -2,30 +2,30 @@ from django.db import models
 from django.utils import timezone
 
 class learners(models.Model):
-    FirstName = models.CharField(max_length=225)
-    LastName =  models.CharField(max_length=225)
-    IdProof = models.CharField(max_length=100)
+    First_Name = models.CharField(max_length=225)
+    Last_Name =  models.CharField(max_length=225)
+    Id_Proof = models.CharField(max_length=100)
     Phone = models.BigIntegerField()
-    DateofBirth = models.DateField(default=timezone.now)
+    Date_OF_Birth = models.DateField(default=timezone.now)
     Email = models.EmailField(max_length=225)
-    RegisteredDate =  models.DateField(default=timezone.now)
-    BatchId =  models.CharField(max_length=100)
-    Alternatephone = models.BigIntegerField()
+    Registered_Date =  models.DateField(default=timezone.now)
+    Batch_Id =  models.CharField(max_length=100)
+    Alternate_Phone = models.BigIntegerField()
     Description =  models.TextField()
     Source = models.CharField()
-    LearnerOwner = models.IntegerField()
+    Learner_Owner = models.IntegerField()
     Currency = models.DecimalField(max_digits=10, decimal_places=3)
-    ExchangeRate = models.DecimalField(max_digits=10, decimal_places=3)
-    Leadcreatedtime =  models.DateField(default=timezone.now)
-    RegisteredCourse = models.IntegerField()
-    TechStack = models.CharField(max_length=100)
-    CourseComments = models.CharField(max_length=100)
-    SlackAccess = models.CharField(max_length=100)
-    LMSAccess = models.CharField(max_length=100)
-    ModeOfClass = models.CharField(max_length=100)
+    Exchange_Rate = models.DecimalField(max_digits=10, decimal_places=3)
+    Lead_Created_Time =  models.DateField(default=timezone.now)
+    Registered_Course = models.IntegerField()
+    Tech_Stack = models.CharField(max_length=100)
+    Course_Comments = models.CharField(max_length=100)
+    Slack_Access = models.CharField(max_length=100)
+    LMS_Access = models.CharField(max_length=100)
+    Mode_Of_Class = models.CharField(max_length=100)
     Comment = models.CharField(max_length=100)
-    PreferableTime=  models.DateField(default=timezone.now)
-    BatchTiming = models.DateField(default=timezone.now)
+    Preferable_Time=  models.DateField(default=timezone.now)
+    Batch_Timing = models.DateField(default=timezone.now)
 
     ATTEND_DEMO_CHOICES=[
         ('None', 'None'),
@@ -83,7 +83,7 @@ class learners(models.Model):
     ]
     COUNSELING_CHOICES = [
         ('True', 'True'),
-        ('False', 'False'),
+        ('False', 'False')
     ]
         
     Attended_Demo= models.CharField(
@@ -101,7 +101,7 @@ class learners(models.Model):
         choices=LOCATION_CHOICES,
         default='None',
     )
-    counseling_done_by = models.CharField(
+    Counseling_Done_By = models.CharField(
         max_length=5,
         choices=COUNSELING_CHOICES,
         default='False'

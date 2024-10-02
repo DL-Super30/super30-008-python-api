@@ -159,38 +159,31 @@ class opportunities(models.Model):
     ]
     
 
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    cc = models.BigIntegerField()
-    contact_no = models.BigIntegerField()
-    email = models.EmailField(max_length=255)
-    fee_coated = models.DecimalField(max_digits=10, decimal_places=2)
-    description = models.TextField()
-    date = models.DateField() 
+    Id = models.AutoField(primary_key=True)
+    Name = models.CharField(max_length=255)
+    CC = models.BigIntegerField()
+    Contact_No = models.BigIntegerField()
+    Email = models.EmailField(max_length=255)
+    Fee_Coated = models.DecimalField(max_digits=10, decimal_places=2)
+    Description = models.TextField()
+    Date = models.DateField() 
    
-
-    
-
- 
-
-    batch_timing = models.CharField(
+    Batch_Timing = models.CharField(
         max_length=10,  # Adjusted max_length to fit the longest value
         choices=BATCH_TIMING_CHOICES,
         default='7AM-8AM',
     )
-    lead_status = models.CharField(
+    Lead_Status = models.CharField(
         max_length=13,
         choices=LEAD_STATUS_CHOICES,
         default='None',
     )
-    lead_source = models.CharField(
+    Lead_Source = models.CharField(
         max_length=24,
         choices=LEAD_SOURCE_CHOICES,
         default='None',
     )
-
-  
-    TechStack= models.CharField(
+    Tech_Stack= models.CharField(
         max_length=24,
         choices=TECH_STACK_CHOICES,
         default='HR',
@@ -200,32 +193,32 @@ class opportunities(models.Model):
         choices=COURSES_CHOICES,
         default='None',
     )
-    class_mode = models.CharField(
+    Class_Mode = models.CharField(
         max_length=24,
         choices=CLASS_MODE_CHOICES,
         default='HYD Classroom',
     )
-    opportunity_status = models.CharField(
+    Opportunity_Status = models.CharField(
         max_length=30,
         choices=OPPORTUNITY_STATUS,
         default='Visited',
     )
-    opportunity_stage = models.CharField(
+    Opportunity_Stage = models.CharField(
         max_length=30,
         choices=OPPORTUNITY_STAGE,
         default='None',
     )
-    demoattended_stage = models.CharField(
+    Demoattended_Stage = models.CharField(
         max_length=30,
         choices=DEMOATTENDED_STAGE,
         default='None',
     )
-    visited_stage = models.CharField(
+    Visited_Stage = models.CharField(
         max_length=30,
         choices=VISITED_STAGE,
         default='None',
     )
-    lostopportunity_reason = models.CharField(
+    Lost_Opportunity_Reason = models.CharField(
         max_length=30,
         choices=LOSTOPPORTUNITY_REASON,
         default='Not Interested',
