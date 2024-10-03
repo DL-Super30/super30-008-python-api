@@ -27,10 +27,10 @@ class UserLoginView(generics.GenericAPIView):
         if user is not None:
             return Response({'message': 'Login successful!'}, status=status.HTTP_200_OK)
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
-    def get(self, request, *args, **kwargs):
-        try:
-            users = user.objects.all()
-            userdata = [{'username': user.username} for user in users]
-            return Response(userdata, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    # def get(self, request, *args, **kwargs):
+    #     try:
+    #         users = user.objects.all()
+    #         userdata = [{'username': user.username} for user in users]
+    #         return Response(userdata, status=status.HTTP_200_OK)
+    #     except Exception as e:
+    #         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
