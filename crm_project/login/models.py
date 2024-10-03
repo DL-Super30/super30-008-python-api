@@ -5,7 +5,7 @@ class Login(models.Model):
     username = models.CharField(max_length=55)
     password = models.CharField(max_length=55)
 
-#modified data    
+# #modified data    
 
-    def __str__(self):
-        return self.username
+#     def __str__(self):
+#         return self.username
