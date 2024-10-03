@@ -7,8 +7,7 @@ import psycopg2
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# import pymysql
-# pymysql.install_as_MySQLdb()
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -92,17 +91,6 @@ WSGI_APPLICATION = 'crm_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-# import os
-# import environ
-
-# # Initialise environment variables
-# env = environ.Env()
-# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))  # Load variables from .env file
-
-# # Database configuration
-# DATABASES = {
-#     'default': env.db('DATABASE_URL'),  # Use the DATABASE_URL from the environment
-# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -154,7 +142,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost.3000",
-#     "http://127.0.0.1:3000",
-# ]
