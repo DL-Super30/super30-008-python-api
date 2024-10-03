@@ -92,6 +92,17 @@ WSGI_APPLICATION = 'crm_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
+# import os
+# import environ
+
+# # Initialise environment variables
+# env = environ.Env()
+# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))  # Load variables from .env file
+
+# # Database configuration
+# DATABASES = {
+#     'default': env.db('DATABASE_URL'),  # Use the DATABASE_URL from the environment
+# }
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
