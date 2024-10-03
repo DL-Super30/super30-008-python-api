@@ -5,12 +5,14 @@ from rest_framework.status import HTTP_204_NO_CONTENT
 import pytz
 from .models import CreateLeads
 from .serializers import CreateLeadsSerializer
+from rest_framework import permissions
 # Create your views here.
 
 class CreateLeadsViewSet(viewsets.ModelViewSet):
 
     queryset = CreateLeads.objects.all()
     serializer_class = CreateLeadsSerializer
+    permission_classes=[permissions.IsAuthenticated]
 
 
 
