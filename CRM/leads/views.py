@@ -3,7 +3,7 @@ from .models import leads
 from django.shortcuts import render
 from .serializers import Leadserializers
 import pytz
-from rest_framework import permissions
+# from rest_framework import permissions
 # Create your views here.
 
 
@@ -11,7 +11,7 @@ class LeadViewSet(viewsets.ModelViewSet):
 
     queryset=leads.objects.all()
     serializer_class=Leadserializers
-    permission_classes=[permissions.IsAuthenticated]
+    # permission_classes=[permissions.IsAuthenticated]
 
     
     def leads(request):
