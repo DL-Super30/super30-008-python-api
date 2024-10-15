@@ -3,7 +3,7 @@ from .models import leads
 from django.shortcuts import render
 from .serializers import Leadserializers
 import pytz
-# from rest_framework import permissions
+from rest_framework import permissions
 # Create your views here.
 
 
