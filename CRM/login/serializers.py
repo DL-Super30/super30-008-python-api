@@ -9,13 +9,25 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         fields = ['username', 'password']
         
 
-    def create(self, validated_data):
-        user = User(
-            username=validated_data['username'],
-        )
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
+    def validate_username(self,value):
+        
+        if not value[0].isupper():
+            raise serializers.ValidationError("first letter must be uppercase.")
+        if not value.isalpha():
+            raise serializers.ValidationError("username must be letters")
+        if len(value)<3:
+            raise serializers.ValidationError("username will be greater than 3 characters.")
+        return value
+    
+    def validate_password(self,value):
+
+        if not value[0].isupper():
+            raise serializers.ValidationError("password first letter must be uppercase.")
+        if len(value)<6:
+            raise serializers.ValidationError("password must contain 6 characters")
+        if User.objects.filter(password=value).exists():
+            raise serializers.ValidationError("This password has been already been used.")
+        return value
 
 class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField()
